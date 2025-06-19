@@ -34,6 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             const Text(
               "iqtibos",
+
               style: TextStyle(
                 color: AppColors.opacityWhite,
                 fontSize: 35,
