@@ -45,7 +45,7 @@ class _QuoteApiService implements QuoteApiService {
     )
         .compose(
           _dio.options,
-          '/character',
+          '/quote',
           queryParameters: queryParameters,
           data: _data,
         )

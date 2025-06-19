@@ -2,9 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iqtibos_flutter/core/constants/colors.dart';
+import 'package:iqtibos_flutter/features/quote/domain/entity/quote/quote.dart';
 import 'package:iqtibos_flutter/features/quote/presentation/pages/info/info_screen.dart';
+import 'package:iqtibos_flutter/features/quote/presentation/pages/main/bloc/quote_bloc.dart';
 import 'package:iqtibos_flutter/features/quote/presentation/pages/main/main_page.dart';
+import 'package:iqtibos_flutter/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -21,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-
+    context.read<QuoteBloc>().add(QuoteEvent.getQuote());
   }
   @override
   Widget build(BuildContext context) {

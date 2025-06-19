@@ -8,7 +8,7 @@ part 'quote_api_service.g.dart';
 abstract class QuoteApiService {
   factory QuoteApiService(Dio dio, {String baseUrl}) = _QuoteApiService;
 
-  @GET("/character")
+  @GET("/quote")
   Future<Quote> getQuote({
     @Query("author") String? author,
     @Query("id") int? id,
